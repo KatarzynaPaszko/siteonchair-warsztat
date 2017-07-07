@@ -1,3 +1,37 @@
 *, *::before, *::after {
     box-sizing:border-box;
 }
+
+/*GLOBALNE KLASY*/
+
+.container {
+  width: 1060px;
+  margin: 0 auto;
+  min-height: 1px;
+  border: 1px solid red;
+}
+
+.page-header {
+  height: 40px;
+  background: #000;
+}
+
+.page-nav {
+  display: inline-block;
+  color: white;
+
+}
+
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-nav li {
+  display: inline-block;
+}
+
+.page-nav li a {
+  color: white;
+  text-decoration: none;
+}
