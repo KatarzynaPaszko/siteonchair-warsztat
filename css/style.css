@@ -134,9 +134,8 @@ html, body {
 /*BANER----------------------------------------------------------------------*/
 .section1 {
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(192,192,192,1) 100%);
-  border-bottom: 5px solid black;
-
 }
+
 .baner {
   display: flex;
   height: 500px;
@@ -189,7 +188,7 @@ h1 strong {
 .benefits {
   display: flex;
   justify-content: space-between;
-  margin: 60px 0;
+  margin: 30px 0 60px 0;
 }
 
 .benefits-cnt {
@@ -303,6 +302,37 @@ h1 strong {
   background-color: #E0E0E0;
   transform: translate(-50%,-50%);
 }
+
+/*stylowanie wyroznionej przewieszki - klasa special*/
+
+.special {
+  border: 2px solid #57C7B0;
+  background-color: #57C7B0;
+}
+
+.special:before {
+  border: 2px solid #57C7B0;
+  background-color: #57C7B0;
+}
+
+.special:after {
+  background-color: white;
+}
+
+.special .offer-price-price {
+  background-color: white;
+  color:#57C7B0;
+  border-color: white;
+}
+
+.special .btn {
+  background-color: white;
+}
+
+.offer .special .btn a {
+  color: #57C7B0;
+}
+
 
 /*stylowanie zawartosci przewieszek*/
 
