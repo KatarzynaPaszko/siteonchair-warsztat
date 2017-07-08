@@ -2,23 +2,115 @@
     box-sizing:border-box;
 }
 
-/*GLOBALNE KLASY*/
-
-.container {
-  width: 1060px;
-  margin: 0 auto;
-  min-height: 1px;
-  border: 1px solid red;
+body {
+  font-family:"Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+html, body {
+  height: 100%;
+}
+
+/*GLOBALNE KLASY*/
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+/*WYSRODKOWANIE*/
+        .container {
+          width: 1060px;
+          margin: 0 auto;
+          min-height: 1px;
+          /*border: 1px solid red;*/
+  }
+/*BUTTON*/
+        .btn {
+          background-color: #57C7B0;
+          border-radius: 5px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+          padding: 20px;
+          font-weight: bold;
+        }
+/*HEADER z nieieskim podkresleniem i przezroczystym tlem*/
+        h3, h2 {
+          font-weight: bold;
+          padding: 25px 30px;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        div h3, h2 {
+          position: relative;
+          background-color: rgba(242, 250, 250, 0.5);
+        }
+
+        h3::after, h2::after {
+          content: "";
+          width: 50%;
+          height: 5px;
+          position: absolute;
+          background-color: #57C7B0;
+          top: 50px;
+          left: 30px;
+        }
+
+        h3 strong, h2 strong {
+          text-transform: uppercase;
+        }
+
+        h2 {
+          padding: 20px 0;
+        }
+
+        h2::after {
+          left: 0px;
+          width: 30%;
+        }
+
+/*BACKGROUND IMG srolling effect*/
+        .sect {
+          height: 100%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
+
+        /*.sub-sect {
+          height: 80%;
+
+        }*/
+
+        .img1 {
+          background-image: url("../images/baner3.jpg");
+        }
+
+        .img2 {
+          background-image: url("../images/baner2.jpg");
+        }
+
+        .img3 {
+          background-image: url("../images/baner1.jpg");
+        }
+
+/*STYLOWAIE POSZCZEGOLNYCH SEKCJI*/
+
+/*HEADER-----------------------------------------------------------------------*/
 
 .page-header {
   height: 40px;
   background: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
 }
 
 .page-nav {
   display: inline-block;
   color: white;
+  text-transform: uppercase;
 
 }
 
@@ -29,9 +121,129 @@
 
 .page-nav li {
   display: inline-block;
+  padding: 10px 20px 20px 10px;
 }
 
 .page-nav li a {
   color: white;
   text-decoration: none;
+  font-weight:600;
+}
+
+/*BANER----------------------------------------------------------------------*/
+.section1 {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(192,192,192,1) 100%);
+  border-bottom: 5px solid black;
+
+}
+.baner {
+  display: flex;
+  height: 500px;
+  justify-content: flex-start;
+}
+
+.baner-prev, .baner-next {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 80px;
+  color: #57C7B0;
+  font-weight: bold;
+}
+
+.baner-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.baner-body-cnt {
+  text-align: center;
+  width: 60%;
+  padding-right: 50px;
+}
+
+.baner-body-cnt h1 {
+  text-transform: uppercase;
+  font-size: 35px;
+  padding: 50px;
+}
+h1 strong {
+  color: #57C7B0;
+}
+
+.baner-body-cnt p {
+  font-size: 16px;
+  line-height: 30px;
+  padding-bottom: 40px;
+}
+
+.baner-body-cnt .btn {
+  margin: 20px;
+}
+
+/*BENEFITS------------------------------------------------------------------*/
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0;
+}
+
+.benefits-cnt {
+  width: 330px;
+  position: relative;
+  order: 1px solid rgba(0,0,0,0);
+}
+
+.benefits-img {
+  background-size: cover;
+  height: 226px;
+  max-width: none;
+  overflow: hidden;
+}
+
+.benefits-header {
+  position: absolute;
+  top:120px;
+  width: 330px;
+  transition: 1s;
+}
+
+.benefits-text {
+  font-size: 15px;
+  line-height: 1.2rem;
+  padding: 15px 0;
+  position: absolute;
+  top: 70px;
+  padding: 10px 30px;
+  visibility: hidden;
+}
+
+.benefits-cnt:hover {
+    border: 1px solid grey;
+}
+
+.benefits-cnt:hover .benefits-header {
+  top:0px;
+}
+
+.benefits-cnt:hover .benefits-img {
+  visibility: hidden;
+}
+
+.benefits-cnt:hover .benefits-text {
+  visibility: visible;
+}
+
+/*OFFER------------------------------------------------------------------*/
+
+.offer {
+  display: flex;
+    flex-direction: column;
+}
+.offer-plans {
+  display: flex;
+  justify-content: space-between;
 }
