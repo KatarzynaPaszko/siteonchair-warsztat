@@ -44,7 +44,7 @@ html, body {
 
         div h3, h2 {
           position: relative;
-          background-color: rgba(242, 250, 250, 0.5);
+          background-color: rgba(255, 255, 255, 0.5);
         }
 
         h3::after, h2::after {
@@ -93,6 +93,7 @@ html, body {
 
         .img3 {
           background-image: url("../images/baner1.jpg");
+          background-position: bottom;
         }
 
 /*STYLOWAIE POSZCZEGOLNYCH SEKCJI*/
@@ -239,11 +240,147 @@ h1 strong {
 
 /*OFFER------------------------------------------------------------------*/
 
+.section3 {
+  background-color: #F8F8F8;
+}
+
+
 .offer {
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  padding: 20px 0 40px 0;
 }
 .offer-plans {
   display: flex;
   justify-content: space-between;
+  margin-left: 0;
+  padding-left: 0;
+
+}
+
+.offer-header h2 {
+  background-color: transparent;
+}
+/*stylowanie ofert - przewieszki -wyglad zewnetrzny--------------------------------------------------*/
+
+.offer-plans-cnt {
+  width: 30%;
+  height: 500px;
+  border: 2px solid #E0E0E0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin-top: 50px;
+  background-color: white;
+}
+
+.offer-plans-cnt::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border: 2px solid #E0E0E0;
+  top:-2%;
+  left:50%;
+  border-radius: 100%;
+  z-index: 1;
+  background-color: white;
+  transform: translate(-50%,-50%);
+}
+
+.offer-plans-cnt::after {
+  content: "";
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top:-2%;
+  left:50%;
+  border-radius: 100%;
+  z-index: 2;
+  background-color: #E0E0E0;
+  transform: translate(-50%,-50%);
+}
+
+/*stylowanie zawartosci przewieszek*/
+
+/*polozenie tytulu*/
+.offer-plans-cnt h4 {
+  text-transform: uppercase;
+  color: #57C7B0;
+  font-size: 25px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/*stylowanie zawartosci kolka i jego polozenia*/
+
+.offer-price-price {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #E0E0E0;
+  border-radius: 50%;
+  color: #9D9EA3;
+  font-size: 38px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.offer-price-price sup {
+  font-size: 10px;
+  vertical-align: super;
+
+}
+.offer-price-price p:last-of-type {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/*stylowanie zawartosci listy i jej polozenia*/
+.offer-price li {
+  padding: 10px;
+}
+
+.offer-price ul {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  color: grey;
+  font-size: 20px;
+}
+
+
+
+.offer-price li:nth-of-type(odd) {
+  background-color: #E1E3EF;
+}
+
+.offer-price li:nth-of-type(even) {
+  background-color: #F8F8F8;
+}
+
+/*stylowanie  polozenia i wygladu btn */
+.offer-plans-cnt .btn {
+  position: absolute;
+  top: 440px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 8%;
+}
+.offer-plans-cnt .btn a {
+  text-decoration: none;
+  color: white;
 }
