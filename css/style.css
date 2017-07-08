@@ -112,6 +112,8 @@ html, body {
   display: inline-block;
   color: white;
   text-transform: uppercase;
+  background-color: black;
+  height: 40px;
 
 }
 
@@ -121,9 +123,61 @@ html, body {
 }
 
 .page-nav li {
+  position: relative;
   display: inline-block;
-  padding: 10px 20px 20px 10px;
 }
+
+
+.page-nav li ul {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: black;
+  z-index: 50;
+}
+
+.page-nav-submenu {
+  visibility: hidden;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.page-nav li:hover .page-nav-submenu {
+  visibility: visible;
+  z-index: 101;
+}
+
+.page-nav-submenu::before {
+  content:"";
+  width:0;
+  height:0;
+  border:10px solid transparent; /* rgba(0,0,0,0); */
+  border-bottom-color:#000;
+  position: absolute;
+  left:50%;
+  top:-19px;
+  transform: translate(-50%, 0);
+}
+
+.page-nav-submenu::after {
+    content:''; /* to jest czarny dziubek z bordera */
+    position: absolute;
+    left:0;
+    top:-17px;
+    transform: translate(-50%, 0);
+    width:200%;
+    height:17px;
+}
+
+
+
+.page-nav li a {
+  display: inline-block;
+  padding: 8px;
+}
+
+
 
 .page-nav li a {
   color: white;
@@ -194,7 +248,7 @@ h1 strong {
 .benefits-cnt {
   width: 330px;
   position: relative;
-  order: 1px solid rgba(0,0,0,0);
+  border: 1px solid rgba(0,0,0,0);
 }
 
 .benefits-img {
@@ -276,6 +330,10 @@ h1 strong {
   background-color: white;
 }
 
+.offer-plans-cnt h4 {
+    width: 100%;
+}
+
 .offer-plans-cnt::before {
   content: "";
   width: 60px;
@@ -302,37 +360,6 @@ h1 strong {
   background-color: #E0E0E0;
   transform: translate(-50%,-50%);
 }
-
-/*stylowanie wyroznionej przewieszki - klasa special*/
-
-.special {
-  border: 2px solid #57C7B0;
-  background-color: #57C7B0;
-}
-
-.special:before {
-  border: 2px solid #57C7B0;
-  background-color: #57C7B0;
-}
-
-.special:after {
-  background-color: white;
-}
-
-.special .offer-price-price {
-  background-color: white;
-  color:#57C7B0;
-  border-color: white;
-}
-
-.special .btn {
-  background-color: white;
-}
-
-.offer .special .btn a {
-  color: #57C7B0;
-}
-
 
 /*stylowanie zawartosci przewieszek*/
 
@@ -412,6 +439,39 @@ h1 strong {
 }
 .offer-plans-cnt .btn a {
   text-decoration: none;
+  color: white;
+}
+
+/*stylowanie wyroznionej przewieszki - klasa special*/
+
+.special {
+  border: 2px solid #57C7B0;
+  background-color: #57C7B0;
+}
+
+.special:before {
+  border: 2px solid #57C7B0;
+  background-color: #57C7B0;
+}
+
+.special:after {
+  background-color: white;
+}
+
+.special .offer-price-price {
+  background-color: white;
+  color:#57C7B0;
+  border-color: white;
+}
+
+.special .btn {
+  background-color: white;
+}
+
+.offer .special .btn a {
+  color: #57C7B0;
+}
+.special h4 {
   color: white;
 }
 
