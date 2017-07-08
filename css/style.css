@@ -283,6 +283,27 @@ h1 strong {
   overflow: hidden;
 }
 
+.benefits-img img {
+  position: relative;
+  transition: 0.5s all;
+}
+
+.benefits-img:hover img {
+  transform: scale(1.2,1.2);
+}
+
+.benefits-description {
+  transition: 0.5s all;
+  background: rgba(255,255,255,0.5);
+  left:0;
+  width:100%;
+}
+
+.benefits-cnt:hover .benefits-description {
+  background: rgba(255,255,255,1);
+}
+
+
 .benefits-header {
   position: absolute;
   top:120px;
