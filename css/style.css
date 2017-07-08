@@ -414,3 +414,15 @@ h1 strong {
   text-decoration: none;
   color: white;
 }
+
+.stopka {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 20px 0;
+  color: #CCCCCC;
+}
+
+.stopka-rs {
+  display: flex;
+  justify-content: space-between;
+}
