@@ -31,7 +31,20 @@ html, body {
           color: white;
           padding: 20px;
           font-weight: bold;
+          border: 1px solid #57C7B0;
         }
+
+        .btn:hover {
+          background-color: white;
+          border-radius: 5px;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #57C7B0;
+          padding: 20px;
+          font-weight: bold;
+          border: 1px solid #57C7B0;
+        }
+
 /*HEADER z nieieskim podkresleniem i przezroczystym tlem*/
         h3, h2 {
           font-weight: bold;
@@ -185,9 +198,17 @@ html, body {
   font-weight:600;
 }
 
+li:hover, .page-nav li:hover a {
+  color: #57C7B0;
+}
+
+.page-nav li li:hover a {
+  color: white;
+}
+
 /*BANER----------------------------------------------------------------------*/
 .section1 {
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(192,192,192,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(200,200,200,1) 100%);
 }
 
 .baner {
@@ -204,6 +225,10 @@ html, body {
   font-size: 80px;
   color: #57C7B0;
   font-weight: bold;
+}
+
+.baner-prev:hover, .baner-next:hover {
+  color: white;
 }
 
 .baner-body {
@@ -442,7 +467,22 @@ h1 strong {
   color: white;
 }
 
+.offer-plans-cnt .btn:hover a {
+  color: #57C7B0;
+}
+
 /*stylowanie wyroznionej przewieszki - klasa special*/
+
+
+
+.special .btn:hover {
+  border-color: white;
+  background-color: #57C7B0;
+}
+
+.special .btn:hover a {
+  color: white;
+}
 
 .special {
   border: 2px solid #57C7B0;
@@ -468,7 +508,7 @@ h1 strong {
   background-color: white;
 }
 
-.offer .special .btn a {
+.special .btn a {
   color: #57C7B0;
 }
 .special h4 {
@@ -476,19 +516,6 @@ h1 strong {
 }
 
 
-/*stylowanie stopki ---------------------------------------------------------------*/
-
-.stopka {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 0 20px 0;
-  color: #CCCCCC;
-}
-
-.stopka-rs {
-  display: flex;
-  justify-content: space-between;
-}
 
 /*stylowanie formularza---------------------------------------------------------------*/
 
@@ -580,4 +607,19 @@ h1 strong {
 
 .agreement input:checked ~ .checkbox-icon {
   background: url(../images/form_ok.jpg) center center no-repeat;
+}
+
+
+/*stylowanie stopki ---------------------------------------------------------------*/
+
+.stopka {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0 20px 0;
+  color: #CCCCCC;
+}
+
+.stopka-rs {
+  display: flex;
+  justify-content: space-between;
 }
