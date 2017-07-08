@@ -71,19 +71,19 @@ html, body {
         }
 
 /*BACKGROUND IMG srolling effect*/
-        /*.sect {
+        .sect {
           height: 100%;
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: fixed;
-        }*/
+        }
 
         /*.sub-sect {
           height: 80%;
 
         }*/
 
-        /*.img1 {
+        .img1 {
           background-image: url("../images/baner3.jpg");
         }
 
@@ -94,7 +94,7 @@ html, body {
         .img3 {
           background-image: url("../images/baner1.jpg");
           background-position: bottom;
-        }*/
+        }
 
 /*STYLOWAIE POSZCZEGOLNYCH SEKCJI*/
 
@@ -456,4 +456,68 @@ h1 strong {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.contactUs-ls input[type="text"],
+.contactUs-ls input[type="email"],
+.contactUs-ls textarea {
+    font-family: 'Raleway', sans-serif;
+    border:1px solid #A1E6D1;
+    height:65px;
+    padding:15px;
+    width: 100%;
+    margin-top:28px;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.contactUs-ls textarea {
+    height:195px;
+    resize: none;
+    color: #C9C9C9;
+    margin-bottom: 30px;
+}
+
+.contactUs-ls ::-webkit-input-placeholder {
+    color: #C9C9C9;
+}
+.contactUs-ls ::-moz-placeholder {
+    color: #C9C9C9;
+}
+.contactUs-ls :-ms-input-placeholder {
+    color: #C9C9C9;
+}
+.contactUs-ls :-moz-placeholder {
+    color: #C9C9C9;
+}
+
+
+
+.checkbox-text {
+  color: #C9C9C9;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  margin: 10px 0 30px 0;
+  width: calc(100% - 120px);
+}
+
+.agreement {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  padding: 30px 0px 30px 80px ;
+}
+.agreement input {
+  position: absolute;
+  left: -10000px;
+}
+.agreement input ~ .checkbox-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #A1E6D1;
+}
+
+.agreement input:checked ~ .checkbox-icon {
+  background: url(../images/form_ok.jpg) center center no-repeat;
 }
