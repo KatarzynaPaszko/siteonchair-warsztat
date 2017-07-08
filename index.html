@@ -167,13 +167,31 @@
         <div class="container">
           <div class="contactUs">
             <h2>Kontakt</h2>
-            <form action="">
-              <label for="name"></label>
-              <input type="text" name"imie" id="name" placeholder="Imie">
-              <label for="email"></label>
-              <input type="email" name="email" id="email" placeholder="email">
-              <label for="message"></label>
-              <textarea name="message" rows="8" cols="80">Wiadomość</textarea>
+
+            <form action="" class="contactUs-form">
+
+
+              <div class="contactUs-ls">
+                <label for="name"></label>
+                <input type="text" name"imie" id="name" placeholder=" Imie">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder=" email">
+                <label for="message"></label>
+                <textarea name="message"> Wiadomość</textarea>
+              </div>
+
+
+              <div class="contactUs-rs">
+                <img src="images/red_chair.png" alt="">
+                <label for="agreement">
+                    <input type="checkbox" id="agreement">
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text">Wyrażam zgodę na przetwarzanie danych osobowych</span>
+                </label>
+                <button type="submit" class="btn contactUs-btn">Wyślij</button>
+              </div>
+
+
             </form>
           </div>
         </div>

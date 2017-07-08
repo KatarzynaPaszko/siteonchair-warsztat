@@ -71,19 +71,19 @@ html, body {
         }
 
 /*BACKGROUND IMG srolling effect*/
-        .sect {
+        /*.sect {
           height: 100%;
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: fixed;
-        }
+        }*/
 
         /*.sub-sect {
           height: 80%;
 
         }*/
 
-        .img1 {
+        /*.img1 {
           background-image: url("../images/baner3.jpg");
         }
 
@@ -94,7 +94,7 @@ html, body {
         .img3 {
           background-image: url("../images/baner1.jpg");
           background-position: bottom;
-        }
+        }*/
 
 /*STYLOWAIE POSZCZEGOLNYCH SEKCJI*/
 
@@ -415,6 +415,9 @@ h1 strong {
   color: white;
 }
 
+
+/*stylowanie stopki ---------------------------------------------------------------*/
+
 .stopka {
   display: flex;
   justify-content: space-between;
@@ -425,4 +428,32 @@ h1 strong {
 .stopka-rs {
   display: flex;
   justify-content: space-between;
+}
+
+/*stylowanie formularza---------------------------------------------------------------*/
+
+.contactUs-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactUs-btn {
+  border: 1px solid transparent;
+  font-size: 25px;
+}
+
+.contactUs-ls {
+  width: 600px;
+}
+
+.contactUs-ls input, textarea  {
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+.contactUs-rs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
