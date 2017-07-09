@@ -46,24 +46,24 @@ html, body {
         }
 
 /*HEADER z nieieskim podkresleniem i przezroczystym tlem*/
-        h3, h2 {
+        .title-line {
           font-weight: bold;
-          padding: 25px 30px;
+          padding: 25px 0px;
         }
 
         h2 {
           font-size: 20px;
         }
 
-        div h3, h2 {
+        .title-line {
           position: relative;
           background-color: rgba(255, 255, 255, 0.5);
         }
 
-        h3::after, h2::after {
+        .title-line::after {
           content: "";
           width: 50%;
-          height: 5px;
+          height: 8px;
           position: absolute;
           background-color: #57C7B0;
           top: 50px;
@@ -74,18 +74,27 @@ html, body {
           text-transform: uppercase;
         }
 
-        h2 {
-          padding: 20px 0;
-        }
-
-        h2::after {
+        .title-line::after {
           left: 0px;
           width: 30%;
         }
 
+        .h2u {
+          text-transform: uppercase;
+        }
+
+        .h3t {
+          padding-left: 20px;
+        }
+
+        .h3t::after {
+          left:20px;
+          width: 50%;
+        }
+
 /*BACKGROUND IMG srolling effect*/
         .sect {
-          height: 100%;
+          height: 400px;
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: fixed;
@@ -138,6 +147,8 @@ html, body {
 .page-nav li {
   position: relative;
   display: inline-block;
+  font-size: 15px;
+  padding-top: 4px;
 }
 
 
@@ -198,13 +209,11 @@ html, body {
   font-weight:600;
 }
 
-li:hover, .page-nav li:hover a {
+.page-nav li:hover > a,
+.page-nav li li:hover a {
   color: #57C7B0;
 }
 
-.page-nav li li:hover a {
-  color: white;
-}
 
 /*BANER----------------------------------------------------------------------*/
 .section1 {
@@ -231,24 +240,32 @@ li:hover, .page-nav li:hover a {
   color: white;
 }
 
+.baner-body-slide {
+  position: relative;
+}
+
 .baner-body {
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 80px 80px 80px 10px;
+}
+
+.baner-body-img {
+  margin-top: 20px;
 }
 
 .baner-body-cnt {
   text-align: center;
   width: 60%;
-  padding-right: 50px;
 }
 
-.baner-body-cnt h1 {
+.baner-body-cnt h2 {
   text-transform: uppercase;
   font-size: 35px;
   padding: 50px;
 }
-h1 strong {
+h2 strong {
   color: #57C7B0;
 }
 
@@ -274,10 +291,10 @@ h1 strong {
   width: 330px;
   position: relative;
   border: 1px solid rgba(0,0,0,0);
+  overflow: hidden;
 }
 
 .benefits-img {
-  background-size: cover;
   height: 226px;
   max-width: none;
   overflow: hidden;
@@ -288,37 +305,41 @@ h1 strong {
   transition: 0.5s all;
 }
 
-.benefits-img:hover img {
-  transform: scale(1.2,1.2);
-}
 
 .benefits-description {
   transition: 0.5s all;
   background: rgba(255,255,255,0.5);
   left:0;
   width:100%;
+  position: absolute;
+  top: 120px;
+
 }
 
 .benefits-cnt:hover .benefits-description {
   background: rgba(255,255,255,1);
+  top: 0;
+  height: 100%;
 }
 
 
 .benefits-header {
   position: absolute;
-  top:120px;
+  top:10px;
   width: 330px;
   transition: 1s;
 }
 
 .benefits-text {
   font-size: 15px;
-  line-height: 1.2rem;
-  padding: 15px 0;
   position: absolute;
   top: 70px;
-  padding: 10px 30px;
-  visibility: hidden;
+  padding: 5px 30px 0 30px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  color: rgba(0, 0, 0, 0);
+  transition: 0.5s all;
 }
 
 .benefits-cnt:hover {
@@ -329,12 +350,10 @@ h1 strong {
   top:0px;
 }
 
-.benefits-cnt:hover .benefits-img {
-  visibility: hidden;
-}
-
 .benefits-cnt:hover .benefits-text {
-  visibility: visible;
+  height: 130px;
+  opacity: 1;
+  color: rgba(0, 0, 0, 1);
 }
 
 /*OFFER------------------------------------------------------------------*/
