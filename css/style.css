@@ -246,7 +246,7 @@ html, body {
 
 .baner-body {
   width: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   padding: 80px 80px 80px 10px;
 }
@@ -277,6 +277,14 @@ h2 strong {
 
 .baner-body-cnt .btn {
   margin: 20px;
+}
+
+/*.slider ~ div{
+    display: none;
+}*/
+
+.slider .visible{
+    display: flex;
 }
 
 /*BENEFITS------------------------------------------------------------------*/
