@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
                  }
              }
            }
-
            if (form.children[1].firstElementChild.innerText!="Wybierz kolor") {
              var selectedColor = summaryPanel.firstElementChild.children[1];
              selectedColor.innerText=form.children[1].innerText;
@@ -80,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
                  }
              }
            }
-
            if (form.children[2].firstElementChild.innerText!="Wybierz materiał") {
              var selectedFabric = summaryPanel.firstElementChild.children[2];
              selectedFabric.innerText=form.children[2].innerText;
@@ -91,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
                  }
              }
            }
-
            sum = parseInt(summaryPanel.children[1].children[0].innerText) +
                  parseInt(summaryPanel.children[1].children[1].innerText) +
                  parseInt(summaryPanel.children[1].children[2].innerText) +
@@ -121,5 +118,4 @@ document.addEventListener("DOMContentLoaded", function() {
           parseInt(summaryPanel.children[1].children[3].innerText);
     toPay = summaryPanel.children[3].firstElementChild;
     toPay.innerText=sum;
-
   })
