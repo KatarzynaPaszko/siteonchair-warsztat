@@ -17,10 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
   },3500);
   changeSlide;
 
-
-
-
-
   nextPicture.addEventListener("click", function(e){
 
     slider[counter].classList.remove("visible");
@@ -36,8 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
     counter = counter < 0 ? slider.length-1 : counter; //turnery operator
     slider[counter].classList.add("visible");
   })
-
-
 
 });
 
@@ -129,3 +123,6 @@ document.addEventListener("DOMContentLoaded", function() {
     toPay.innerText=sum;
 
   })
+
+
+ });
