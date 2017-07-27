@@ -4,11 +4,22 @@ document.addEventListener("DOMContentLoaded", function() {
   var slider = document.querySelectorAll(".slider .baner-body");
   var nextPicture = document.querySelector(".baner-next");
   var prevPicture = document.querySelector(".baner-prev");
-  var sum = 0;
 
   var counter = 0;
 
   slider[counter].classList.add("visible");
+
+  var changeSlide = setInterval(function() {
+    slider[counter].classList.remove("visible");
+    counter++;
+    counter = counter >= slider.length ? 0 : counter; ////turnery operator
+    slider[counter].classList.add("visible");
+  },3500);
+  changeSlide;
+
+
+
+
 
   nextPicture.addEventListener("click", function(e){
 
@@ -25,6 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
     counter = counter < 0 ? slider.length-1 : counter; //turnery operator
     slider[counter].classList.add("visible");
   })
+
+
 
 });
 
@@ -105,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
         summaryPanel.children[0].children[3].innerText="Transport";
     } else if (document.getElementById("transport").checked==false) {
       summaryPanel.children[1].children[3].innerText = 0;
+      summaryPanel.children[0].children[3].innerText="bez transportu";
     }
 
     sum = parseInt(summaryPanel.children[1].children[0].innerText) +
