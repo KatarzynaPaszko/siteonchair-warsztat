@@ -123,6 +123,3 @@ document.addEventListener("DOMContentLoaded", function() {
     toPay.innerText=sum;
 
   })
-
-
- });
